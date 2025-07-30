@@ -37,7 +37,7 @@ Additionally, I saved the winning topic model as a Joblib dump for use in future
 # Predictions
 Whenever new news articles are received, they are loaded into memory, the topic model saved in Joblib is loaded, and a topic inference is performed using the title concatenated with the text as input. This returns the most likely topic and its probability. After reviewing some predictions, I decided to set a minimum probability threshold of 0.2 for assigning a topic (other than the "junk" topic), as some articles with low probability did not truly belong to the stored topic.
 
-Another difference from the approach discussed in class is that my vector database search is based on topics rather than embeddings. I found this to be a more logical and straightforward alternative since the saved model can directly infer which topic an article belongs to (and its probability) instead of relying on cosine similarity for the same task.
+The vector database search is based on topics rather than embeddings. I found this to be a more logical and straightforward alternative since the saved model can directly infer which topic an article belongs to (and its probability) instead of relying on cosine similarity for the same task.
 
 Once the topic is identified in the database, the keywords and entities present in both the article and the stored topic are retrieved.
 
