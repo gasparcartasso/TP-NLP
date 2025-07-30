@@ -30,7 +30,7 @@ This stage corresponds to the model that assigns a name to each topic. The selec
 Saving to the Vector Database
 The next step involves saving the necessary data into the vector database for future production queries.
 
-Unlike the approach taken in class, I opted to store entities and keywords as lists to facilitate matching new documents (along with their keywords and entities) to their assigned topics during production.
+I opted to store entities and keywords as lists to facilitate matching new documents (along with their keywords and entities) to their assigned topics during production.
 
 Additionally, I saved the winning topic model as a Joblib dump for use in future inferences.
 
